@@ -24,23 +24,25 @@ async def start(client, message):
 
     if message.chat.type in ['group', 'supergroup']:
 
-        buttons = [
+        b
 
-            [
+           
 
-                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/VintageBotz')
+      
 
-            ],
 
-            [
+            
+            
 
-                InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
 
-                InlineKeyboardButton('ᴄʟᴏsᴇ ✗', callback_data="close_data"),
 
-            ]
 
-            ]
+   
+
+     
+
+            
+
 
         reply_markup = InlineKeyboardMarkup(buttons)
 
