@@ -24,7 +24,51 @@ async def start(client, message):
 
     if message.chat.type in ['group', 'supergroup']:
 
-        b
+        buttons = [
+
+            [
+
+                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/VintageBotz')
+
+            ],
+
+            [
+
+                InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+
+                InlineKeyboardButton('ᴄʟᴏsᴇ ✗', callback_data="close_data"),
+
+            ]
+
+            ]
+
+        reply_markup = InlineKeyboardMarkup(buttons)
+
+        await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAJc-GIfWR3hIR_5MRjwkOdkT41wrBcHAAIVAQACyJRkFGZEMKKnFWwTHgQ', reply_markup=reply_markup, reply_to_message_id=message.message_id)
+
+        await asyncio.sleep(60)
+
+        if not await db.get_chat(message.chat.id):
+
+            total=await client.get_chat_members_count(message.chat.id)
+
+            await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
+
+            await db.add_chat(message.chat.id, message.chat.title)
+
+        return 
+
+    if not await db.is_user_exist(message.from_user.id):
+
+        await db.add_user(message.from_user.id, message.from_user.first_name)
+
+        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
+
+    if len(message.command) != 2:
+
+
+
+      
 
            
 
@@ -70,8 +114,6 @@ async def start(client, message):
 
         buttons = [[
 
-            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-
             ],[
 
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
@@ -80,23 +122,38 @@ async def start(client, message):
 
             ],[
 
-            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ ʜᴇʀᴇ ᴍᴏᴠɪᴇ🔎', switch_inline_query_current_chat='')
+            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ ʜᴇʀe🔎', switch_inline_query_current_chat='')
 
             ],[
 
-            InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/nishn_ea'),
+            InlineKeyboardButton('creator', url='https://t.me/optimus_prime_althaf'),
 
-            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/CinemaVeed')
-
-            ],[
-
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url='https://t.me/VintageBotz'),
+            InlineKeyboardButton('join group', url='https://t.me/ME_poly_eng')
 
             ],[
 
             InlineKeyboardButton('✗ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✗' , callback_data='close_data')
 
         ]]
+
+         
+    
+
+
+
+     
+
+
+  
+
+
+
+   
+
+
+
+
+
 
         
         
@@ -196,16 +253,28 @@ async def start(client, message):
             )
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        bbuttons = [[
+
             ],[
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/MWUpdatez'),
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/OpusTechz')
-            ],[      
+
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
+
             ],[
-            InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
+
+            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ ʜᴇʀe🔎', switch_inline_query_current_chat='')
+
+            ],[
+
+            InlineKeyboardButton('creator', url='https://t.me/optimus_prime_althaf'),
+
+            InlineKeyboardButton('join group', url='https://t.me/ME_poly_eng')
+
+            ],[
+
+            InlineKeyboardButton('✗ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✗' , callback_data='close_data')
+
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
