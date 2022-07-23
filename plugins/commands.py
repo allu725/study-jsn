@@ -22,13 +22,19 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
+
             [
-                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/VintageBotz')
+
+                InlineKeyboardButton('how to use me', url='https://telegra.ph/How-to-use-bumblebee-07-23')
+
             ],
+
             [
-                InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+
                 InlineKeyboardButton('ᴄʟᴏsᴇ ✗', callback_data="close_data"),
+
             ]
+
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAJc-GIfWR3hIR_5MRjwkOdkT41wrBcHAAIVAQACyJRkFGZEMKKnFWwTHgQ', reply_markup=reply_markup, reply_to_message_id=message.message_id)
