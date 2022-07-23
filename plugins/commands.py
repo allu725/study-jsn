@@ -28,7 +28,15 @@ async def start(client, message):
 
             [
 
-                InlineKeyboardButton('𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/AboutAadhi")
+                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/VintageBotz')
+
+            ],
+
+            [
+
+                InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+
+                InlineKeyboardButton('ᴄʟᴏsᴇ ✗', callback_data="close_data"),
 
             ]
 
@@ -36,9 +44,9 @@ async def start(client, message):
 
         reply_markup = InlineKeyboardMarkup(buttons)
 
-        await message.reply(script.PRIVATEBOT_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+        await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAJc-GIfWR3hIR_5MRjwkOdkT41wrBcHAAIVAQACyJRkFGZEMKKnFWwTHgQ', reply_markup=reply_markup, reply_to_message_id=message.message_id)
 
-        await asyncio.sleep(2) # 😢 https://github.com/Aadhi000/Ajax-Extra-Features/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
+        await asyncio.sleep(60)
 
         if not await db.get_chat(message.chat.id):
 
@@ -49,6 +57,18 @@ async def start(client, message):
             await db.add_chat(message.chat.id, message.chat.title)
 
         return 
+
+
+
+
+
+           
+
+
+
+
+
+ 
 
     if not await db.is_user_exist(message.from_user.id):
 
