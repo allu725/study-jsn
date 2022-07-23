@@ -70,7 +70,10 @@ async def start(client, message):
 
  
 
-    if not await db.is_user_exist(message.from_user.id):
+    
+        
+        
+    iif not await db.is_user_exist(message.from_user.id):
 
         await db.add_user(message.from_user.id, message.from_user.first_name)
 
@@ -79,6 +82,8 @@ async def start(client, message):
     if len(message.command) != 2:
 
         buttons = [[
+
+        
             ],[
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
