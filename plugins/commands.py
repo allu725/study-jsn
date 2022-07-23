@@ -25,7 +25,7 @@ async def start(client, message):
 
             [
 
-                InlineKeyboardButton('how to use me', url='https://telegra.ph/How-to-use-bumblebee-07-23')
+                InlineKeyboardButton('how to use me', url='https://telegra.ph/How-to-use-bumblebee-07-23-2')
 
             ],
 
