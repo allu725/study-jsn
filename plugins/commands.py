@@ -43,19 +43,25 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
+
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
+
             ],[
-            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ ʜᴇʀᴇ ᴍᴏᴠɪᴇ🔎', switch_inline_query_current_chat='')
+
+            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎', switch_inline_query_current_chat='')
+
             ],[
-            InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/nishn_ea'),
-            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/CinemaVeed')
+
+            InlineKeyboardButton('creator', url='https://t.me/optimus_prime_althaf'),
+
+            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/ME_poly_eng')
+
             ],[
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url='https://t.me/VintageBotz'),
-            ],[
+
             InlineKeyboardButton('✗ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✗' , callback_data='close_data')
+
                 ]]
 
         reply_markup = InlineKeyboardMarkup(buttons)
