@@ -10,7 +10,7 @@ class script(object):
 
     ABOUT_TXT = """<b>✮ 𝙼𝚈 𝙽𝙰𝙼𝙴: optimus prime</b>
 
-<b>✮ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=>optimus primehttps://t.me/optimus_prime_althaf</a></b>
+<b>✮ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a https://t.me/optimus_prime_althaf>optimus prime.althaf</a></b>
 
 <b>✮ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼</b>
 
