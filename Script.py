@@ -2,7 +2,7 @@ class script(object):
 
     START_TXT = """𝙷𝙴𝙻𝙾 {},
 
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, i can provide book's and other study material . I'm made for mechanical polytechnic group .. but i  also have other notes just search , join group ♥️♥️🔥"""
+𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, i can provide book's and other study material . I'm made for mechanical polytechnic group .. but i  also have other notes just search , important ✨ you need join group for use this bot ♥️♥️🔥"""
 
     HELP_TXT = """𝙷𝙴𝚈 {}
 
