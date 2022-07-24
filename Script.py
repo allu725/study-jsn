@@ -142,7 +142,7 @@ Note:- Give a user details
 
 <b>NOTE:</b>
 
-1. ᗩᒍᗩ᙭ should have admin privillage.
+1. bumblebee should have admin privillage.
 
 2. only admins can add filters in a chat.
 
@@ -206,11 +206,11 @@ Translate text to speech
 
 <b>NOTE:</b>
 
-• IMDb should have admin privillage.
+• bumblebee should have admin privillage.
 
 • These commands works on both pm and group.
 
-• IMDb can translate texts to 200+ languages."""
+• bumblebee can translate texts to 200+ languages."""
 
     PINGS_TXT ="""<b>🌟 Ping:</b>
 
@@ -292,13 +292,13 @@ Delete A Lot Of Messages From Groups!
 
     BUTTON_TXT = """Help: <b>Buttons</b>
 
--ᗩᒍᗩ᙭  Supports both url and alert inline buttons.
+- bot Supports both url and alert inline buttons.
 
 <b>NOTE:</b>
 
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
 
-2. ᗩᒍᗩ᙭ supports buttons with any telegram media type.
+2. bot supports buttons with any telegram media type.
 
 3. Buttons should be properly parsed as markdown format
 
@@ -350,7 +350,7 @@ Delete A Lot Of Messages From Groups!
 
 <b>NOTE:</b>
 
-these are the extra features of ᗩᒍᗩ᙭ 
+these are the extra features of bot
 
 <b>Commands and Usage:</b>
 
