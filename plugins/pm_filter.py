@@ -749,8 +749,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
             ],[
-            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ ʜᴇʀe🔎', switch_inline_query_current_chat='')
-            ],[
+            
+      
             InlineKeyboardButton('creator', url='https://t.me/optimus_prime_althaf'),
             InlineKeyboardButton('join group', url='https://t.me/ME_poly_eng')
             ],[
